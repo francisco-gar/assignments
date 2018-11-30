@@ -1,0 +1,28 @@
+body {
+    float: left;
+}
+
+li:hover {
+    color: whitesmoke;
+    
+}
+
+#style1  {
+    background-color: purple;
+    
+}
+
+#style2 {
+    background-color: blue;
+    
+}
+
+#style3 {
+    background-color: red;
+    
+}
+
+footer {
+    font-size: 16px;
+}
+
