@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box; 
+    max-width: 800px;
+    margin: auto;
+}
+
+.salmonOne {
+    background-color: #F5C6D6;
+    width: 764px;
+    display: inline-block;
+    margin: auto;
+    height: 140px;
+    border-style: solid;
+    border-color: white;
+}
+
+.magentaFour {
+    background-color: #EE2E84;
+    display: inline-block;
+    height: 140px;
+    width: 188px;
+    margin: auto;
+    border-style: solid;
+    border-color: white;
+}
+
+.cyanTwo {
+    background-color: #85CFD8;
+    display: inline-block;
+    height: 140px;
+    width: 380px;
+    margin: auto;
+    border-style: solid;
+    border-color: white;
+}
+
+.greenOne {
+    background-color: #8DC63F;
+    display: inline-block;
+    height: 140px;
+    width: 580px;
+    
+    margin: auto;
+    border-style: solid;
+    border-color: white;
+}
+
+.orange {
+    background-color: #E76E34;
+    display: inline-block;
+    height: 140px;
+    width: 180px;
+    margin: auto;
+    border-style: solid;
+    border-color: white;
+}
