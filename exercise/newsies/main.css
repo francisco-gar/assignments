@@ -1,27 +1,38 @@
+* {
+    box-sizing: border-box;
+    
+}
+
 body {
-    display: inline-block;
     margin-top: 10em;
-    margin-left: 4em;
-    margin-right: 4em;
+    margin-left: 6em;
+    margin-right: 6em;
 }
 
 .boxClassifeids {
     border-style: double;
     display: inline-block;
     padding: 2em;
+    margin: 12px;
+    width: 48%;
 }
+
+
 
 h2 {
+    font-size: 3em;
     text-align: center;
 }
 
-h3, h4 {
+h3 {
+    font-size: 2.5em;
     text-align: center;
-    font-size: 1.5em;
+
 }
 
-#mainStory {
-    
+h4 {
+    text-align: center;
+    font-size: 2em;
 }
 
 #newspaperName {
@@ -30,8 +41,14 @@ h3, h4 {
     font-family: fantasy;
     font-style: italic;
 }
+
 article {
     column-count: 2;
+    column-gap: 50px;
+    line-height: 2em;
+    text-indent: 5%;
+    margin: 20px;
+    display: inline-block
 }
 
 
