@@ -1,0 +1,211 @@
+.boxBlue {
+    background-color: blue;
+    height: 400px;
+    width: 200px;
+    display: inline-block;
+    position: relative;
+    right: 200px;
+}
+
+.boxRed {
+    background-color: red;
+    width: 200px;
+    height: 400px;
+    display: inline-block;
+    position: relative;
+    left: 400px;
+}
+
+.horizontalBlack {
+    background-color: black;
+    width: 600px;
+    height: 133px;
+}
+
+.horizontalRed {
+    background-color: red;
+    width: 600px;
+    height: 133px;
+}
+
+.horizontalYellow {
+    background-color: yellow;
+    width: 600px;
+    height: 133px;
+}
+
+.redBar {
+    background-color: red;
+    width: 400px;
+    height: 200px;
+}
+
+.greenBar {
+    background-color: green;
+    width: 400px;
+    height: 200px;
+}
+
+.redBar, .greenBar {
+    position: relative;
+    left: 200px;
+}
+
+.redBackground {
+    background-color: red;
+    width: 600px;
+    height: 600px;
+    display: inline-block;
+}
+
+.switzerland {
+    position: relative;
+    display: inline-block;
+}
+
+.whiteBar1 {
+    background-color: white;
+    height: 300px;
+    width: 100px;
+    position: absolute;
+    left: 42%;
+    top: 23%;
+    display: inline-block;
+
+}
+
+.whiteBar2 {
+    background-color: white;
+    height: 100px;
+    width: 300px;
+    position: absolute;
+    left: 25%;
+    top: 40%;
+    display: inline-block;
+}
+
+.sweden {
+    display: block;
+  
+}
+
+.lightBlueBackground {
+    background-color: royalblue;
+    width: 600px;
+    height: 400px;
+    display: inline-block;
+    position: static;
+}
+
+.yellowBar1 {
+    background-color: yellow;
+    height: 400px;
+    width: 75px;
+    display: inline-block;
+    position: absolute;
+    left: 200px;
+}
+
+.yellowBar2 {
+    background-color: yellow;
+    width: 600px;
+    height: 75px;
+    display: inline-block;
+    position: relative;
+    right: 604px;
+    bottom: 160px;
+}
+
+.flag.gambia {
+    height: 400px;
+    width: 600px;
+    display: block;
+}
+
+.gambiaRed {
+    background-color: rgb(110, 7, 7);
+    width: 600px;
+    height: 33%;
+}
+
+.gambiaBlue {
+    background-color: navy;
+    width: 600px;
+    height: 100px;
+    /* border: solid white;
+    
+    border left: 0px; */
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+.gambiaGreen {
+    background-color: forestgreen;
+    width: 600px;
+    height: 33%;
+}
+
+.flag.tonga{
+    margin-top: 20px;
+    position: static;
+}
+
+.redTongaBackground {
+    background-color: darkred;
+    height: 400px;
+    width: 600px;
+    display: inline-block;
+    position: static;
+}
+
+.whiteBox {
+    background-color: white;
+    height: 200px;
+    width: 300px;
+    display: inline-block;
+    position: absolute;
+    left: -60px;
+}
+
+.redCross1 {
+    background-color: darkred;
+    width: 50px;
+    height: 150px;
+    display: inline-block;
+    position: absolute;
+    left: 95px;
+    margin-top: 20px
+}
+
+.redCross2 {
+    background-color: darkred;
+    width: 150px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    left: 47px;
+    margin-top: 70px
+}
+
+.flag.japan {
+    display: inline-block;
+    position: relative;
+}
+
+.backgroundWhite {
+    width: 600px;
+    height: 400px;
+    display: inline-block;
+    position: relative;
+}
+
+.circleJapan {
+    height: 200px;
+    width: 200px;
+    background-color: darkred;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    left: -400px;
+    margin-bottom: 100px;
+}
