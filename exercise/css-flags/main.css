@@ -6,7 +6,6 @@
     position: relative;
     right: 200px;
 }
-
 .boxRed {
     background-color: red;
     width: 200px;
@@ -15,54 +14,45 @@
     position: relative;
     left: 400px;
 }
-
 .horizontalBlack {
     background-color: black;
     width: 600px;
     height: 133px;
 }
-
 .horizontalRed {
     background-color: red;
     width: 600px;
     height: 133px;
 }
-
 .horizontalYellow {
     background-color: yellow;
     width: 600px;
     height: 133px;
 }
-
 .redBar {
     background-color: red;
     width: 400px;
     height: 200px;
 }
-
 .greenBar {
     background-color: green;
     width: 400px;
     height: 200px;
 }
-
 .redBar, .greenBar {
     position: relative;
     left: 200px;
 }
-
 .redBackground {
     background-color: red;
     width: 600px;
     height: 600px;
     display: inline-block;
 }
-
 .switzerland {
     position: relative;
     display: inline-block;
 }
-
 .whiteBar1 {
     background-color: white;
     height: 300px;
@@ -71,9 +61,7 @@
     left: 42%;
     top: 23%;
     display: inline-block;
-
 }
-
 .whiteBar2 {
     background-color: white;
     height: 100px;
@@ -83,12 +71,9 @@
     top: 40%;
     display: inline-block;
 }
-
 .sweden {
     display: block;
-  
-}
-
+  }
 .lightBlueBackground {
     background-color: royalblue;
     width: 600px;
@@ -96,7 +81,6 @@
     display: inline-block;
     position: static;
 }
-
 .yellowBar1 {
     background-color: yellow;
     height: 400px;
@@ -105,7 +89,6 @@
     position: absolute;
     left: 200px;
 }
-
 .yellowBar2 {
     background-color: yellow;
     width: 600px;
@@ -208,4 +191,33 @@
     position: relative;
     left: -400px;
     margin-bottom: 100px;
+}
+
+flag.greece {
+    display: inline-block;
+}
+.greeceBackground {
+    height: 400px;
+    width: 600px;
+    border: solid;
+    display: inline-block
+}
+
+.horizontalBlueStripe1 {
+    background-color: blue;
+    width: 600px;
+    height: 50px;
+    position: relative;
+    display: inline-block;
+    left: -607px;
+}
+
+.horizontalBlueStripe2 {
+    background-color: blue;
+    width: 600px;
+    height: 50px;
+    position: relative;
+    display: inline-block;
+    /* left: -607px; */
+    /* bottom: 50px; */
 }
