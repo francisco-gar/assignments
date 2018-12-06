@@ -1,0 +1,31 @@
+.image{
+    height: 80px;
+    width: 100%;
+    background-image: url("https://www.merriam-webster.com/assets/mw/images/article/art-wap-landing-mp-lg/puppy-3143-ad4140d8f6055cda2cd8956d4af37ea9@1x.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: inline-block;
+}
+
+@media(min-width: 600px){
+    .image {
+        width: 32%;
+        margin: 0;
+    }
+}
+
+@media(min-width: 900px){
+    nav {
+        visibility: visible;
+    }
+    .image{
+        width: 24%;
+        margin: 0;
+    }
+    #menu-btn{
+        visibility: hidden;
+    }
+}
+

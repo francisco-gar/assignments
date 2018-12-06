@@ -28,4 +28,18 @@ multiplyCalculation.addEventListener("click", function(e){
     console.log(mathSumMultiply);
 })
 
+// var addWrapper = document.createElement('p');
+
+// var attachedSum = document.addWrapper.innerText('mathSumAdd.value');
+
+// document.add.attachChild('addWrapper');
+
+
+
+
+
+
+
+
+
 
