@@ -33,8 +33,9 @@
     }
 
     footer{
-        /* left: 0;
-        bottom: 0; */
+        position: fixed;
+        left: 0;
+        bottom: 20px;
         width: 100%;
         font-family: 'Luckiest Guy', cursive;
         font-family: 'Open Sans', sans-serif;
@@ -42,8 +43,8 @@
         color: yellow;
         text-shadow: 1px 1px black;
         display: flex;
-        align-content: left;
-        margin: 0;
+        align-content: flex-start;
+        margin: -10px;
 
     }
 
