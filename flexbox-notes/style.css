@@ -1,0 +1,38 @@
+*{
+    /* margin: 0; */
+}
+
+.parent{
+    height: 100vh;
+    width: 100vw;
+    background-color: lightcoral;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+    /* align-items: flex-end; */
+    /* flex-wrap: wrap; */
+}
+
+.child{
+    height: 100px;
+    width: 50%;
+    /* width: 100px; */
+    border: 1px solid black;
+    background-color: cornflowerblue;
+    flex: 1;
+}
+
+.right{
+    margin-left: auto;
+    align-self: flex-end;
+}
+
+.fat{
+    flex: 4;
+}
+
+.skinny{
+    flex: .5
+}

@@ -2,10 +2,11 @@ var addForm1 = document.getElementById("firstAdd");
 var addForm2 = document.getElementById("secondAdd");
 var addCalculation = document.getElementById("additionResult");
 
+// var mathSumAdd = +addForm1.value + +addForm2.value;
 addCalculation.addEventListener("click", function(e){
     e.preventDefault();
     var mathSumAdd = +addForm1.value + +addForm2.value;
-    console.log(mathSumAdd);
+    displayAnswer(mathSumAdd);
 })
 
 var subtractForm1 = document.getElementById("firstSubtract");
@@ -15,7 +16,7 @@ var subtractCalculation = document.getElementById("subtractionResult");
 subtractCalculation.addEventListener("click", function(e){
     e.preventDefault();
     var mathSumSubtract = +subtractForm1.value - +subtractForm2.value;
-    console.log(mathSumSubtract);
+    displayAnswer(mathSumSubtract);
 })
 
 var multiplicationForm1 = document.getElementById("firstMultiply");
@@ -25,21 +26,19 @@ var multiplyCalculation = document.getElementById("multiplicationResult")
 multiplyCalculation.addEventListener("click", function(e){
     e.preventDefault();
     var mathSumMultiply = +multiplicationForm1.value * +multiplicationForm2.value;
-    console.log(mathSumMultiply);
+    displayAnswer(mathSumMultiply);
 })
 
-// var addWrapper = document.createElement('p');
+function displayAnswer(value){
+    var wrapper = document.createElement('div');
+    var coinTotal = document.createElement('p');
+   
 
-// var attachedSum = document.addWrapper.innerText('mathSumAdd.value');
+    coinTotal.textContent = value.;
+    ageLabel.textContent = data.age;
 
-// document.add.attachChild('addWrapper');
+    wrapper.appendChild(fnameLabel);
+    wrapper.appendChild(ageLabel);
+    list.appendChild(wrapper);
 
-
-
-
-
-
-
-
-
-
+}

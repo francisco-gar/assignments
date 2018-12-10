@@ -9,18 +9,22 @@
 </head>
 <body>
 <div name="add" class="add">
-    <h3>Addition</h3>
-        <form name="firstadd"><label>First Number:<input id="firstAdd"type="number"/>
-        <form name="secondadd"><label>Second Number:<input id="secondAdd"type="number"/>
+    <div id="addButton" name="addButton">
+        <h3 class="headAdd">Addition</h3>
+        <form ><label>First Number:<input name="firstadd" id="firstAdd"type="number"/>
+        <form ><label>Second Number:<input name="secondadd" id="secondAdd"type="number"/>
         <!-- <form name="addsum"><label>Sum:<input id="addSum"type="number"/> -->
         <button name="addbutton" id="additionResult"><output>Calculate:</output></button>
+    </div>
 </div>
 <div class="substract">
-    <h3>Subtraction</h3>
-        <form name="firstsubtract"><label>First Number:<input id="firstSubtract"type="number"/>
-        <form name="secondsubtract"><label>Second Number:<input id="secondSubtract"type="number"/>
+    <div id="substractButton">
+        <h3>Subtraction</h3>
+        <form ><label>First Number:<input name="firstsubtract" id="firstSubtract"type="number"/>
+        <form ><label>Second Number:<input name="secondsubtract" id="secondSubtract"type="number"/>
         <!-- <form name="subtractsum"><label>Sum:<input id="subtractSum"type="number"/> -->
         <button id="subtractionResult"><output>Calculate:</output></button>
+    </div>
 </div>
 <div class="multiply">
     <h3>Multiplication</h3>
@@ -28,6 +32,7 @@
         <form name="secondmultiply"><label>Second Number:<input id="secondMultiply"type="number"/>
         <button id="multiplicationResult"><output>Calculate:</output></button>
 </div>
+<div id="spanAttach"></div>
 <script src="app.js"></script>
 </body>
 </html>

@@ -9,21 +9,26 @@
     
 </head>
 <body>
-    <form name="form">
-    <label for="fname">First Name:<input name="fname" type="text"/></label>
-    <label for="lname">Last Name:<input name="lname" type="text"/></label>
-    <label for="age">Age:<input name="age" type="number"/></label>
-    <label for="male">Male:<input value="male" name="gender" id="male" type="radio"></label>
-    <label for="female">Female:<input value="male" name="gender" id="female" type="radio"></label>
-    <select name="destinations">
-        <option name="seattle" value="seattle">Seattle</option>
-        <option name="portland">Portland</option>
-        <option name="vancouver" value="vancouver">Vancouver</option>
-    </select>
-    <label name="dietaryrestriction" for="dietaryrestriction">Dietary Restrictions:</label>
-        <label for="vegetarian">Vegetarian<input name="vegetarian" type="checkbox"></label>
-        <label for="kosher">Kosher<input name="kosher" type="checkbox"></label>
-        <label for="lactosefree">Lactose Free<input name="lactosefree" type="checkbox"></label>
+    <form name="Travel">
+        <label for="fname">First Name:<input name="fname" type="text"/></label>
+        <label for="lname">Last Name:<input name="lname" type="text"/></label>
+        <label for="age">Age:<input name="age" type="number"/></label>
+        <label for="male">Male:<input value="male" name="gender" id="male" type="radio"></label>
+        <label for="female">Female:<input value="male" name="gender" id="female" type="radio"></label>
+        <select name="destinations">
+            <option value="seattle">Seattle</option>
+            <option value="portland">Portland</option>
+            <option value="vancouver">Vancouver</option>
+        </select>
+        <label name="dietaryrestrictions">Dietary Restrictions:</label>
+            <label for="vegetarian"><input name="vegetarian" type="checkbox">Vegetarian</label>
+            <label for="kosher"><input name="kosher" type="checkbox">Kosher</label>
+            <label for="lactosefree"><input name="lactosefree" type="checkbox">Lactose Free</label>
+            <!-- <label for="none">None<input name="none" type="checkbox"></label> -->
+        
+        <button>Submit</button>
+    </form>
+    
 <script src="app.js"></script>
 </body>
 </html>
