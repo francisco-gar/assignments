@@ -57,6 +57,7 @@ function runChance(){
 
 function enemyLife(Enemies){
     if(Enemies.hp <= 0){
+        return "You defeated your Foe!"
         isWalking();
     } else {
         enemyAttack();
@@ -81,5 +82,5 @@ var startAdventure = rs.keyInSelect(['y'], 'Press \'y\' to begin your Adventure 
 // prompt user for name and info
 while(true){
     var isWalking = rs.keyInSelect(['w'], 'Press \'w\' to continue');
-    enemyChance()
+    enemyChance();
 }
