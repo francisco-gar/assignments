@@ -78,9 +78,10 @@ function gameOver(Player){
 var name = rs.question('What is your name?\n');  
 var player = new Player();
 console.log('Greetings ' + Player.name)
-var startAdventure = rs.keyInSelect(['y'], 'Press \'y\' to begin your Adventure out of the Dark Forest');
-// prompt user for name and info
-while(true){
-    var isWalking = rs.keyInSelect(['w'], 'Press \'w\' to continue');
-    enemyChance();
-}
+
+// var startAdventure = rs.keyInSelect(['y'], 'Press \'y\' to begin your Adventure out of the Dark Forest');
+// // prompt user for name and info
+// while(true){
+//     var isWalking = rs.keyInSelect(['w'], 'Press \'w\' to continue');
+//     enemyChance();
+

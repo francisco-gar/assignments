@@ -14,9 +14,9 @@ numArr = [1,2,'3']
     //     }
     // }
     // return true
-}
+// }
 
-}
+// }
  
 //callBack is
 function every(myArr, callBack){
