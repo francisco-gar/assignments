@@ -1,0 +1,88 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+
+body{
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+    padding-bottom: 60px;
+    /* margin: 0; */
+    padding: 0;
+    height: 100%;
+    /* background-color: whitesmoke */
+    border: solid 1px 
+    
+}
+header{
+    display: block;
+    background-color: black;
+    list-style-type: none;
+    padding: 10px;
+}
+
+nav{
+    display: flex;
+    color: #cccccc;
+}
+
+li{
+    margin: 20px;
+    list-style-type: none;
+}
+
+h1{
+    font-family: 'Unica One', cursive;
+    color: #cccccc;
+    font-size: 3em;
+    margin: 0 0 0 12px;
+}
+
+h3{
+    display: inline-block;
+    margin-left: 40%;
+    font-size: 2em;
+    font-family: 'Unica One';
+}
+
+main{
+    display: inline;
+    min-height:100%;
+   position:relative;
+}
+p{
+    display: inline;
+}
+
+footer{
+    display: block;
+    background-color: black;
+    list-style-type: none;
+    position: bottom;
+    /* bottom: 0; */
+    /* left: 0; */
+    height: 100px;
+    
+}
+
+.today{
+    padding-bottom: 20em;
+    display: grid | inline-grid;
+    /* display: inline-block; */
+}
+
+.individual1{
+    grid-auto-columns: 33%;
+}
+.individual2{
+    grid-auto-columns: 33%;
+}
+.individual3{
+    grid-auto-columns: 33%;
+}
+.headline{
+    font-family: 'Unica One', cursive;
+}
+
