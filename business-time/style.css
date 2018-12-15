@@ -37,7 +37,7 @@ h1{
     font-family: 'Unica One', cursive;
     color: #cccccc;
     font-size: 3em;
-    margin: 0 0 0 12px;
+    margin: 0 0 0 20px;
 }
 
 h3{
@@ -67,22 +67,16 @@ footer{
     
 }
 
+
+
 .today{
     padding-bottom: 20em;
-    display: grid | inline-grid;
-    /* display: inline-block; */
+    display: flex;
+    margin: auto;
 }
 
-.individual1{
-    grid-auto-columns: 33%;
-}
-.individual2{
-    grid-auto-columns: 33%;
-}
-.individual3{
-    grid-auto-columns: 33%;
-}
 .headline{
     font-family: 'Unica One', cursive;
 }
+
 

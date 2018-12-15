@@ -12,7 +12,6 @@ function Player(name){
     this.item = [];
     this.enemiesKilled = 0;
     this.randomPlayerAttack = Math.floor(Math.random() * (55 - 25) + 25);
-    this.escapeChance = Math.floor(Math.random() * 2);
 }
 
 //enemy constructor
@@ -24,6 +23,9 @@ function Enemy(){
     this.items = getRandomElement(items);
 }
 
+function escapeChance(){
+    return Math.floor(Math.random() * 2);
+}
 // pick an enemy at random
 function getRandomElement(arr){
     var index = Math.floor(Math.random() * arr.length)
@@ -31,7 +33,7 @@ function getRandomElement(arr){
 }
 
 function enemyChance(){
-    var chance = Math.floor(Math.random() * 5); // 1 in 5 chance
+    var chance = Math.floor(Math.random() * 5);
     if (chance == 1) {
         var enemy = enemies[Math.floor(Math.random() * enemies.length)];
         return enemy;
@@ -39,7 +41,7 @@ function enemyChance(){
 }
 
 function printStats (){
-        console.log('     Name: ' + player.name + '\n       HP: ' + player.hp + '\nInventory: ' + player.inventory + '\n    Kills: ' + player.enmiesKilled)
+        console.log('     Name: ' + player.name + '\n       HP: ' + player.hp + '\nInventory: ' + player.item + '\n    Kills: ' + player.enemiesKilled)
 }
 
 var name = rs.question('What is your name Captain?\n');
@@ -53,7 +55,6 @@ while(true){
         var encountersEnemy = Math.random() < .333333;
         if(encountersEnemy){
             printStats();
-            //generate random enemy
             var enemy = new Enemy();
             console.log('You encountered a ' + enemy.name);
             var fight = rs.keyInYN('Would you like to fight or flight?')
@@ -64,8 +65,9 @@ while(true){
                     enemy.hp -= player.randomPlayerAttack;
                     console.log('You fired upon the enemy Ship! Reporting ' + (enemyStartHp - enemy.hp + ' DMG to the enemy ' + enemy.name));
                     if(enemy.hp > 0){
-                        player.hp += -enemy.randomAttack;
-                        console.log('The enemy has attacked for ' + (player.hp += -enemy.randomAttack) + ' DMG!');
+                        // -= works the same way, e.g player.hp -= enemy.randomAttack;
+                        player.hp -= enemy.randomAttack;
+                        console.log('The enemy has attacked for ' + (player.hp -= enemy.randomAttack) + ' DMG!');
                     } else {
                         player.enemiesKilled++
                         if ((player.hp += enemy.hpBoost) > 200){
@@ -73,12 +75,12 @@ while(true){
                         }
                         player.item.push(enemy.items);
                         console.log("The Enemy " + enemy.name + 'was destroyed!' + '\nYou have now tallied ' + player.enemiesKilled + ' Kills!') 
-                         
                     }
                 }
             } else {
-                if(player.escapeChance === 1){
+                if(escapeChance() === 1){
                     console.log("I've got a bad feeling about this, \n but we escape")
+
                 } else {
                     player.hp += -enemy.randomAttack;
                     console.log('The ' + enemy.name + ' got a lucky shot on you while you escaped.')
@@ -91,3 +93,5 @@ while(true){
         return false
     }
 }}
+
+//sweet! You should try adding a win condition
