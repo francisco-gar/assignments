@@ -11,7 +11,7 @@ function Player(name){
     this.hp = 200;
     this.item = [];
     this.enemiesKilled = 0;
-    this.randomPlayerAttack = Math.floor(Math.random() * (55 - 25) + 25);
+    // this.randomPlayerAttack = Math.floor(Math.random() * (55 - 25) + 25);
 }
 
 //enemy constructor
@@ -40,6 +40,10 @@ function enemyChance(){
     }
 }
 
+function randomPlayerAttack(){
+    return Math.floor(Math.random() * (55 - 25) + 25);
+}
+
 function printStats (){
         console.log('     Name: ' + player.name + '\n       HP: ' + player.hp + '\nInventory: ' + player.item + '\n    Kills: ' + player.enemiesKilled)
 }
@@ -62,7 +66,7 @@ while(true){
                 while(player.hp > 0 && enemy.hp > 0){
                     var attack = rs.keyInYN('Would you like to attack?')
                     enemyStartHp = enemy.hp;
-                    enemy.hp -= player.randomPlayerAttack;
+                    enemy.hp -= randomPlayerAttack();
                     console.log('You fired upon the enemy Ship! Reporting ' + (enemyStartHp - enemy.hp + ' DMG to the enemy ' + enemy.name));
                     if(enemy.hp > 0){
                         // -= works the same way, e.g player.hp -= enemy.randomAttack;
