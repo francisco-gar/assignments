@@ -1,19 +1,16 @@
-html {
-    position: relative;
-    min-height: 100%;
+html{
+    height: 100%;
 }
-
 
 body{
     max-width: 1200px;
+    min-height: 100%;
     margin: auto;
-    padding: 30px;
-    padding-bottom: 60px;
-    /* margin: 0; */
+    /* padding: 30px; */
+    /* padding-bottom: 60px; */
     padding: 0;
     height: 100%;
-    /* background-color: whitesmoke */
-    border: solid 1px 
+    /* border: solid .5px  */
     
 }
 header{
@@ -31,18 +28,25 @@ nav{
 li{
     margin: 20px;
     list-style-type: none;
+    font-family: 'Unica One';
+    
+
 }
+
+
 
 h1{
     font-family: 'Unica One', cursive;
+    font-weight: bold;
     color: #cccccc;
     font-size: 3em;
     margin: 0 0 0 20px;
+
 }
 
 h3{
     display: inline-block;
-    margin-left: 40%;
+    margin-left: 35%;
     font-size: 2em;
     font-family: 'Unica One';
 }
@@ -50,33 +54,168 @@ h3{
 main{
     display: inline;
     min-height:100%;
-   position:relative;
+    position:relative;
 }
 p{
     display: inline;
+    font-family: 'Unica One', cursive;
+
 }
 
 footer{
     display: block;
     background-color: black;
     list-style-type: none;
-    position: bottom;
-    /* bottom: 0; */
-    /* left: 0; */
-    height: 100px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 90px;
     
 }
 
+a:visited{
+    color: #cccccc;
+    text-decoration: none;
+}
 
+.bodywrap{
+    min-height: 100%;
+    margin-bottom: -75px;
+}
 
-.today{
-    padding-bottom: 20em;
-    display: flex;
-    margin: auto;
+.wrapper{
+    display: grid;
+    /* grid-template-columns: 33% 33% 33%; */
+    grid-column-gap: 1em;
+    grid-row-gap: 3em;
+    grid-auto-rows: minmax(150px, auto);
+}
+
+.headline{
+    margin-bottom: 30px;
+    font-family: 'Unica One', cursive;
+}
+
+.individual{
+    padding-left: 33%;
+    padding-top: 10%;
 }
 
 .headline{
     font-family: 'Unica One', cursive;
 }
 
+.description-shoes{
+    padding-top: 4em;
+}
 
+@media(min-width: 700px){
+    html{
+        height: 100%;
+    }
+    
+    body{
+        max-width: 1200px;
+        min-height: 100%;
+        margin: auto;
+        /* padding: 30px; */
+        /* padding-bottom: 60px; */
+        padding: 0;
+        height: 100%;
+        border: solid .5px 
+        
+    }
+    header{
+        display: block;
+        background-color: black;
+        list-style-type: none;
+        padding: 10px;
+    }
+    
+    nav{
+        display: flex;
+        color: #cccccc;
+    }
+    
+    li{
+        margin: 20px;
+        list-style-type: none;
+        font-family: 'Unica One';
+        
+    
+    }
+    
+    
+    
+    h1{
+        font-family: 'Unica One', cursive;
+        font-weight: bold;
+        color: #cccccc;
+        font-size: 3em;
+        margin: 0 0 0 20px;
+    
+    }
+    
+    h3{
+        display: inline-block;
+        margin-left: 45%;
+        font-size: 2em;
+        font-family: 'Unica One';
+    }
+    
+    main{
+        display: inline;
+        min-height:100%;
+        position:relative;
+    }
+    p{
+        display: inline;
+        font-family: 'Unica One', cursive;
+    
+    }
+    
+    footer{
+        display: block;
+        background-color: black;
+        list-style-type: none;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        height: 90px;
+        
+    }
+    
+    a:visited{
+        color: #cccccc;
+        text-decoration: none;
+    }
+    
+    .bodywrap{
+        min-height: 100%;
+        margin-bottom: -75px;
+    }
+    
+    .wrapper{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-column-gap: 1em;
+        grid-row-gap: 3em;
+        grid-auto-rows: minmax(150px, auto);
+    }
+    
+    .headline{
+        margin-bottom: 30px;
+        font-family: 'Unica One', cursive;
+    }
+    
+    .individual{
+        padding-left: 33%;
+        padding-top: 10%;
+    }
+    
+    .headline{
+        font-family: 'Unica One', cursive;
+    }
+    
+    .description-shoes{
+        padding-top: 4em;
+    }
+}
