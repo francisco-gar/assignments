@@ -210,6 +210,11 @@ a:visited{
         padding-left: 33%;
         padding-top: 10%;
     }
+
+    .sale{
+        color: red;
+        text-decoration: line-through;
+    }
     
     .headline{
         font-family: 'Unica One', cursive;
