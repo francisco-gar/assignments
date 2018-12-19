@@ -1,0 +1,66 @@
+.centered{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    padding: 0 9em;
+}
+.button-center{
+    display: flex;
+    justify-content: center;
+}
+@media(min-width: 1132px){
+    .bodywrap{
+        display: grid;
+        grid-template-areas: 
+            "h h h h h h h tr tr tr tr tr"
+            "co co co co co co co cr cr cr cr cr"
+            "c2 c2 c2 c2 c2 c2 c2 cr cr cr cr cr"
+            "c3 c3 c3 c3 c3 c3 faq faq faq faq faq faq"
+            "c4 c4 c4 c4 c4 c4 faq faq faq faq faq faq"
+            "c5 c5 c5 c5 c5 c5 c5 c5 . . . ."
+            "f f f f f f f f f f f f";
+        grid-template-rows: 3fr;
+    }
+    .centered{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    header{
+        grid-area: h;
+    }
+    .one{
+        grid-area: co;
+    }
+    .two{
+        grid-area: c2;
+    }
+    .three{
+        grid-area: c3;
+    }
+    .four{
+        grid-area: c4;
+    }
+    .five{
+        grid-area: c5;
+    }
+    .faq{
+        grid-area: faq;
+    }
+    .credit{
+        grid-area: cr;
+    }
+    .mainfoot{
+        grid-area: f;
+    }
+    
+    #media-center{
+        display: flex;
+    }
+    #topright{
+        grid-area: tr;
+        justify-content: center;
+    }
+}

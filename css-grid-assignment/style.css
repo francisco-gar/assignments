@@ -1,0 +1,154 @@
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #ffeead;
+    
+}
+
+/* exercise 1 */
+/* .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: .5em;
+}
+ */
+
+
+/* .one{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.two{
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+.three{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.four{
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+.five{
+    grid-column-start: 1;
+    grid-column-end: 5;
+} */
+
+
+
+/* exercise 2 */
+
+
+/* .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: .5em;
+}
+
+.one{
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    
+}
+.two{
+    grid-column: 3/-1;
+}
+.three{
+    grid-column: 3/-2
+}
+.four{
+    grid-column: 4/-1
+}
+.five{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+} */
+
+/* exercise three */
+/* .container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    /* grid-template-columns: repeat(4, minmax(250px, 1fr));
+    grid-gap: .5em;
+
+}
+*/
+
+/* exercise 4 tablet*/
+/* .container{
+    display: grid;
+    grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "s s s c c c c c c c c c"
+        "s2 s2 s2 s2 s2 s2 s2 s2 s2 s2 s2 s2"
+        "f f f f f f f f f f f f";
+    grid-gap: .5em;
+    grid-template-rows: 1fr 3fr 1fr 1fr;
+}
+
+.header{
+    grid-area: h;
+}
+.sidebar{
+    grid-area: s;
+}
+.content{
+    grid-area: c;
+}
+.sidebar2{
+    grid-area: s2;
+}
+.footer{
+    grid-area: f;
+} */
+
+/* exercise four laptop */
+
+.container{
+    display: grid;
+    grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "s c c c c c c c c c c s2"
+        "f f f f f f f f f f f f";
+    grid-gap: .5em;
+    grid-template-rows: 1fr 6fr 1fr 1fr;
+}
+
+.header{
+    grid-area: h;
+}
+.sidebar{
+    grid-area: s;
+}
+.content{
+    grid-area: c;
+}
+.sidebar2{
+    grid-area: s2;
+}
+.footer{
+    grid-area: f;
+}
+
+
+.container > div:nth-child(1n) {
+    background-color: #96ceb4;	
+  }
+  
+  .container > div:nth-child(3n) {
+    background-color: #88d8b0;
+  }
+  
+  .container > div:nth-child(2n) {
+        background-color: #ff6f69;
+  }
+  
+  .container > div:nth-child(4n) {
+        background-color: #ffcc5c;
+  }

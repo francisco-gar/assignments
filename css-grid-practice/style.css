@@ -1,0 +1,71 @@
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #ffeead;
+    
+}
+
+.container{
+    /* display: grid;
+    /* grid-template-columns: 33% 33% 33%; */
+    /* grid-template-columns: repeat(100, 2fr) */
+    /* grid-template-rows: 4fr 30fr */
+    /* grid-template: 2fr 40fr 1fr / repeat(12, auto); */
+    grid-gap: 1em;
+    /* display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr 20fr 1fr;
+    grid-template-areas: 
+        "m m h h h h h h h h h h"
+        "m m c c c c c c c c c c"
+        "f f f f f f f f f f f f";  */
+    
+    
+}
+
+    .header {
+        grid-column: 3 / span 10;
+        /* grid-area: h */
+    }
+    
+    .menu {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+        /* grid-area: m; */
+    }
+    
+    .content {
+        grid-column: 3 / span 10;
+        grid-row: 2 / span 1;
+        /* grid-area: c; */
+    }
+    
+    .footer {
+        grid-column: 1 / span 12
+        /* grid-area: f; */
+    }
+
+
+
+html, body {
+  background-color: #ffeead;
+  margin: 10px;
+}
+
+.container > div:nth-child(1n) {
+  background-color: #96ceb4;	
+}
+
+.container > div:nth-child(3n) {
+  background-color: #88d8b0;
+}
+
+.container > div:nth-child(2n) {
+      background-color: #ff6f69;
+}
+
+.container > div:nth-child(4n) {
+      background-color: #ffcc5c;
+}
