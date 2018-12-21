@@ -1,26 +1,99 @@
+@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic);
+header{
+    background: 
+        url(http://www.csszengarden.com/214/gridlines.png) fixed,
+        url(http://www.csszengarden.com/214/contours-opaque.png) fixed,
+        url(http://www.csszengarden.com/214/huntington.jpg) 105%;
+        color: white;
+        padding: 4em;
+}
+li, ul{
+    list-style-type: none;
+    line-height: 3em;
+    font-family: Julius Sans One;
+}
+h1{
+    font-size: 3em;
+}
+h3{
+    font-size: 1.75em;
+}
+h1, h3{
+    font-family: Julius Sans One;
+    font-weight: normal;
+}
+.listgrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.listitem{
+    font-family: Julius Sans One;
+}
 .centered{
     display: grid;
     justify-content: center;
     align-items: center;
 }
 .content{
-    padding: 0 9em;
+    padding: 0 5em;
+    line-height: 1.5em;
+    font-family: "LibLibre Baskerville", 400, 400 italic;
+    font-size: 1em;
+    font-weight: none;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
-.button-center{
-    display: flex;
-    justify-content: center;
+.four{
+    background:
+        url(http://www.csszengarden.com/214/gridlines.png) fixed,
+        url(http://www.csszengarden.com/214/contours-opaque.png) fixed,
+        url(http://www.csszengarden.com/214/bamboo.png) fixed;
+        background-color: rgb(191, 224, 208);
+}
+#mainfooter{
+    padding: 2em;
+    font-size: 36px;
+    color: white;
+    background: 
+        url(http://www.csszengarden.com/214/gridlines.png) fixed,
+        url(http://www.csszengarden.com/214/contours-opaque.png) fixed,
+        url(http://www.csszengarden.com/214/huntington.jpg) 75%;
+    }
+.credit{
+    padding: 1em;
+    padding-left: 10em;
+}
+.faq{
+    padding: 1em;
+    padding-left: 10em;
+    background:
+    url(http://www.csszengarden.com/214/noise.png),
+        url(http://www.csszengarden.com/214/gridlines.png) fixed,
+        url(http://www.csszengarden.com/214/bamboo.png);
+        background-color: rgb(152, 179, 165);
+}
+.favi{
+    height: 170px;
+    background: rgb(18, 66, 70);
+}
+#mediacenter {
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid grey;
+    opacity: 0.6;
 }
 @media(min-width: 1132px){
     .bodywrap{
         display: grid;
         grid-template-areas: 
-            "h h h h h h h tr tr tr tr tr"
-            "co co co co co co co cr cr cr cr cr"
-            "c2 c2 c2 c2 c2 c2 c2 cr cr cr cr cr"
-            "c3 c3 c3 c3 c3 c3 faq faq faq faq faq faq"
+            "h h h h h h h h h h h h"
+            "co co co co co co cr cr cr cr cr cr"
+            "c2 c2 c2 c2 c2 c2 cr cr cr cr cr cr"
+            "c3 c3 c3 c3 c3 c3 cr cr cr cr cr cr"
             "c4 c4 c4 c4 c4 c4 faq faq faq faq faq faq"
-            "c5 c5 c5 c5 c5 c5 c5 c5 . . . ."
-            "f f f f f f f f f f f f";
+            "c6 c6 c6 c6 c6 c6 eg eg eg eg eg eg"
+            "f f f f f f f f f f f f"
+            "fa fa fa fa fa fa fa fa fa fa fa fa";
         grid-template-rows: 3fr;
     }
     .centered{
@@ -29,7 +102,12 @@
         align-items: center;
     }
     header{
+        display: flex;
         grid-area: h;
+        padding: 4em;
+    }
+    .content{
+        font-size: 18px;
     }
     .one{
         grid-area: co;
@@ -42,25 +120,53 @@
     }
     .four{
         grid-area: c4;
+        background-color: rgb(220, 238, 229);
     }
-    .five{
+    /* .five{
         grid-area: c5;
+    } */
+    .six{
+        grid-area: c6;
+    }
+    .emptygreen{
+        grid-area: eg;
+        background: rgb(214, 224, 219);
     }
     .faq{
+        display: block;
         grid-area: faq;
+        background:
+        url(http://www.csszengarden.com/214/gridlines.png) fixed,
+        url(http://www.csszengarden.com/214/contours-opaque.png) fixed,
+        url(http://www.csszengarden.com/214/bamboo.png) fixed;
+        background-color: rgb(183, 219, 201);
+        /* align-items: flex-start; */
+        padding: 3e;
     }
     .credit{
+        background-color: rgb(214, 224, 219);
         grid-area: cr;
+        padding: 3em;
     }
     .mainfoot{
         grid-area: f;
     }
-    
-    #media-center{
-        display: flex;
+    .favi{
+        grid-area: fa
     }
     #topright{
+        display: block;
+        width: 100%;
         grid-area: tr;
-        justify-content: center;
+    }
+    .listgrid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .mediapadding{
+        padding-right: 10em;
+    }
+    .mediapaddingleft{
+        padding-left: 5em;
     }
 }
