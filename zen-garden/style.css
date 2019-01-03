@@ -2,17 +2,25 @@
 header{
     background: 
         url(http://www.csszengarden.com/214/gridlines.png) fixed,
-        url(http://www.csszengarden.com/214/contours-opaque.png) fixed,
+        url(http://www.csszengarden.com/214/contours.png) fixed,
         url(http://www.csszengarden.com/214/huntington.jpg) 105%;
         color: white;
-        padding: 4em;
+        padding: 1em;
+}
+.subheader{
+    height: 70px;
+    background: 
+        url(http://www.csszengarden.com/214/gridlines.png) fixed,
+        url(http://www.csszengarden.com/214/contours-opaque.png) fixed,
+        url(http://www.csszengarden.com/214/huntington.jpg) 105%;
 }
 li, ul{
     list-style-type: none;
     line-height: 3em;
     font-family: Julius Sans One;
+    border-bottom: 3px black;
 }
-h1{
+#headtitle{
     font-size: 3em;
 }
 h3{
@@ -37,15 +45,36 @@ h1, h3{
 .content{
     padding: 0 5em;
     line-height: 1.5em;
-    font-family: "LibLibre Baskerville", 400, 400 italic;
+    font-family: "Libre Baskerville", 400, 400 italic;
     font-size: 1em;
     font-weight: none;
     padding-top: 2em;
     padding-bottom: 2em;
+    background-color: #fff
+}
+.one{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.two{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.three{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.four{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.five{
+    padding-top: 0;
+    padding-bottom: 0;
 }
 .four{
     background:
-        url(http://www.csszengarden.com/214/gridlines.png) fixed,
+        url(http://www.csszengarden.com/214/gridlines-opaque.png) fixed,
         url(http://www.csszengarden.com/214/contours-opaque.png) fixed,
         url(http://www.csszengarden.com/214/bamboo.png) fixed;
         background-color: rgb(191, 224, 208);
@@ -58,7 +87,7 @@ h1, h3{
         url(http://www.csszengarden.com/214/gridlines.png) fixed,
         url(http://www.csszengarden.com/214/contours-opaque.png) fixed,
         url(http://www.csszengarden.com/214/huntington.jpg) 75%;
-    }
+}
 .credit{
     padding: 1em;
     padding-left: 10em;
@@ -87,10 +116,10 @@ h1, h3{
         display: grid;
         grid-template-areas: 
             "h h h h h h h h h h h h"
-            "co co co co co co cr cr cr cr cr cr"
-            "c2 c2 c2 c2 c2 c2 cr cr cr cr cr cr"
-            "c3 c3 c3 c3 c3 c3 cr cr cr cr cr cr"
-            "c4 c4 c4 c4 c4 c4 faq faq faq faq faq faq"
+            "co co co co co co co co co co cr cr"
+            "c2 c2 c2 c2 c2 c2 c2 c2 c2 c2 cr cr"
+            "c3 c3 c3 c3 c3 c3 c3 c3 c3 c3 cr cr"
+            "c4 c4 c4 c4 c4 c4 c4 c4 c4 c4 faq faq"
             "c6 c6 c6 c6 c6 c6 eg eg eg eg eg eg"
             "f f f f f f f f f f f f"
             "fa fa fa fa fa fa fa fa fa fa fa fa";
@@ -104,7 +133,7 @@ h1, h3{
     header{
         display: flex;
         grid-area: h;
-        padding: 4em;
+        padding: 2em;
     }
     .content{
         font-size: 18px;
@@ -120,6 +149,10 @@ h1, h3{
     }
     .four{
         grid-area: c4;
+        background:
+        url(http://www.csszengarden.com/214/gridlines-opaque.png) fixed,
+        url(http://www.csszengarden.com/214/contours-opaque.png) fixed,
+        url(http://www.csszengarden.com/214/bamboo.png) fixed;
         background-color: rgb(220, 238, 229);
     }
     /* .five{
@@ -137,7 +170,7 @@ h1, h3{
         grid-area: faq;
         background:
         url(http://www.csszengarden.com/214/gridlines.png) fixed,
-        url(http://www.csszengarden.com/214/contours-opaque.png) fixed,
+        url(http://www.csszengarden.com/214/contours.png) fixed,
         url(http://www.csszengarden.com/214/bamboo.png) fixed;
         background-color: rgb(183, 219, 201);
         /* align-items: flex-start; */
@@ -157,7 +190,8 @@ h1, h3{
     #topright{
         display: block;
         width: 100%;
-        grid-area: tr;
+        /* grid-area: tr; */
+        align-self: flex-end;
     }
     .listgrid{
         display: grid;
