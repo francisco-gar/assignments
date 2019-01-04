@@ -6,6 +6,8 @@ import Sidebar from "./Sidebar";
 import Content from "./Content";
 import Footer from "./Footer";
 
+import './assets/styles.css'
+
 const App = () => (
     <div>
         <Nav />
