@@ -1,0 +1,32 @@
+body{
+    max-width: 405px;
+    margin: auto;
+}
+.wrapper{
+    display: grid;
+    grid-template-areas:
+        "o o o o t t t t"
+        "th th th th f f f f";
+    grid-row-gap: 3px;
+    
+}
+
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: black;
+}
+
+.one{
+    grid-area: o;
+}
+.two{
+    grid-area: t;
+}
+.three{
+    grid-area: th;
+}
+.four{
+    grid-area: f;
+}
+

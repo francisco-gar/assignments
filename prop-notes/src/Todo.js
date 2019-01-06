@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Todo = ({title, description, price}) => (
+const Todo = (props) => (
     <div>
         <h3>Title: {props.title}</h3>
         <p>Description {props.description}</p>
