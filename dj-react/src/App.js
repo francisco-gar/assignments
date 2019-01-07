@@ -1,16 +1,14 @@
 import React from "react";
 
 import './style.css';
+import Platform from "./Platform";
 
 
 
 const App = () => (
     <div className='wrapper'>
-        <div className='box one'></div>
-        <div className='box two'></div>
-        <div className='box three'></div>
-        <div className='box four'></div>
+        <Platform />
     </div>
-)
+);
 
 export default App

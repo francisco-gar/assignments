@@ -1,32 +1,18 @@
-body{
-    max-width: 405px;
-    margin: auto;
-}
-.wrapper{
+.grid{
     display: grid;
-    grid-template-areas:
-        "o o o o t t t t"
-        "th th th th f f f f";
-    grid-row-gap: 3px;
-    
-}
+    grid-template-columns: 150px 150px;
+    grid-gap: .25em;
+    /* max-width: 305px;
+    justify-content: center;
+    margin: auto;*/
+    margin-top: 2em;
+    margin-bottom: 1em;
+} 
 
-.box{
-    height: 200px;
-    width: 200px;
-    background-color: black;
-}
 
-.one{
-    grid-area: o;
-}
-.two{
-    grid-area: t;
-}
-.three{
-    grid-area: th;
-}
-.four{
-    grid-area: f;
+
+.square{
+    height: 150px;
+    border: solid black .5px;
 }
 
