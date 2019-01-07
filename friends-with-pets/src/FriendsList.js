@@ -1,6 +1,11 @@
 import React from 'react';
 
-import Friend from './Friend';
+import Friend from './Friend.js';
+// import Pet from './Pet.js';
+
+
+
+
 
 const friends = [
   {
@@ -62,9 +67,11 @@ const friends = [
 
 const App = () => {
   const friendComponents = friends.map((friend, i) => <Friend key={i}{...friend} />);
+  // const petss = friends[2].map(pets, pets);
   return (
     <div>
       {friendComponents}
+      {/* {petss} */}
     </div>)
 }
 
