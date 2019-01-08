@@ -1,10 +1,17 @@
+.wrapper{
+    display: grid;
+    max-width: 305px;
+    margin: auto;
+    
+}
+
 .grid{
     display: grid;
-    grid-template-columns: 150px 150px;
+    grid-template-columns: 200px 200px;
     grid-gap: .25em;
-    /* max-width: 305px;
+    max-width: 305px;
     justify-content: center;
-    margin: auto;*/
+    margin: auto;
     margin-top: 2em;
     margin-bottom: 1em;
 } 
@@ -12,7 +19,7 @@
 
 
 .square{
-    height: 150px;
+    height: 200px;
     border: solid black .5px;
 }
 
