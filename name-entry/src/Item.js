@@ -1,11 +1,11 @@
 import React from 'react';
 
-
-
-const Item = ({ name }) => {
+const Item = (props) => {
     // const style = { backgroundColor: color}
     return (
-        <li></li>
+        <li>
+            {props.firstName} {props.lastName}
+        </li>
     )
 }
 

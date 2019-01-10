@@ -1,9 +1,12 @@
 import React, { Component } from "react";
-import Form from './Form'
+
+import Form from './Form';
+import List from './List';
+
 
 
 class TodoFeature extends Component {
-    constructor(){
+    constructor() {
         super();
         this.state = {
             items: []
@@ -11,22 +14,21 @@ class TodoFeature extends Component {
         this.addItem = this.addItem.bind(this);
     }
 
-    addItem(item){
+    addItem(item) {
         this.setState(ps => ({
             items: [...ps.items, item]
         }))
     }
     // keep track of state here
     // create methods for updating the item list here
-    
-    render(){
-        // const displayItems = this.state.items.map((item, i) => <li key={i}>{item}</li>)
 
+    render() {
         return (
             <div>
                 <Form submit={this.addItem} />
-                {/* {our list and form get reder here} */}
-               
+                <ol>
+                    <List items={this.state.items} />
+                </ol>
             </div>
         )
     }

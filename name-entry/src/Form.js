@@ -32,6 +32,7 @@ class Form extends Component {
                 <input onChange={this.handleChange} name="firstName" value={firstName} type="text" placeholder='Enter First Name'/>
                 <input onChange={this.handleChange} name="lastName" value={lastName} type="text" placeholder='Enter Last Name'/>
                 <button>Submit</button>
+                <h1> {firstName} {lastName} </h1>
             </form>
         )
     }
