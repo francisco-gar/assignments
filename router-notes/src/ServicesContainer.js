@@ -1,7 +1,7 @@
 import React from 'react'
 import Services from './Services'
 
-function default class Services extends Component() {
+function ServicesContainer class Services extends Component() {
    constructor(){
        super();
        this.state = [
@@ -24,4 +24,4 @@ function default class Services extends Component() {
    }
 }
 
-export default default class
+export default ServicesContainer
