@@ -1,9 +1,12 @@
 import React from 'react'
 
-function CharacterDetail({ name }) {
+function CharacterDetail({ name, gender, starships }) {
     return (
         <div>
             <h3>{name}</h3>
+            <p>{gender}</p>
+            {/* <p>{starships}</p> */}
+            
         </div>
     )
 }
