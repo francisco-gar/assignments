@@ -1,10 +1,22 @@
 import React from 'react';
 
-import Toggler from "./Toggler";
-const App = () => (
+
+
+import Button from './Button';
+import FormView from './FormView';
+
+function App() {
+  return(
   <div>
-    <Toggler />
+    
+    <Button />
+    <FormView id='test' handleSubmit={inputs => e => {
+      e.preventDefault();
+      alert(JSON.stringify(inputs))
+
+      }} />
   </div>
-)
+  )
+}
 
 export default App;

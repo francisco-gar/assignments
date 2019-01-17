@@ -17,14 +17,19 @@ class Toggler extends Component {
     }
     render() {
         const { on } = this.state;
-        const props = {
-            on,
-            onClick: this.toggle
-        }
         return (
-            <Button {...props}/>
+            this.props.children({
+                on,
+                toggle: this.toggle
+            })
         )
     }
 }
 
 export default Toggler;
+
+export const withToggler = BigC => bigCProps => (
+    <Toggler>
+        {toggleProps => <BigC {...bigCProps}{...toggleProps}/>}
+    </Toggler>
+)
