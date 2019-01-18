@@ -1,10 +1,10 @@
 import React from 'react'
 import Services from './Services'
 
-function ServicesContainer class Services extends Component() {
+function ServicesContainer() {
    constructor(){
        super();
-       this.state = [
+       this.state = {
            Services: [
                {
                    _id: 'a',
@@ -14,7 +14,7 @@ function ServicesContainer class Services extends Component() {
                    provider: 'nancy'
                }
            ]
-       ]
+        }
    }
    render(){
     const { services } = this.state;
@@ -22,6 +22,6 @@ function ServicesContainer class Services extends Component() {
         <Services />
     )
    }
-}
 
+}
 export default ServicesContainer

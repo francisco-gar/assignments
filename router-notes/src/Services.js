@@ -6,10 +6,11 @@ import ServiceDetail from './ServiceDetail';
 function Services({ services }) {
     const serviceLinks = services.map((service => (
         <li>
-            {/* <Link to={`/services/${services._id}`}>{services.name}</Link> */}
+            <Link to={`/services/${services._id}`}>{services.name}</Link>
             <link to = [{}]
             pathname: `services/${service._id}`,
             state: {service}
+        </li>
     )));
 
 

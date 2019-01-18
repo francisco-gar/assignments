@@ -1,6 +1,6 @@
 import React from 'react'
 
-// import {Route} from 'react-router-dom'
+
 import PlanetData from './PlanetData'
 import Loading from './Loading'
 import ErrorHandler from './ErrorHandler'

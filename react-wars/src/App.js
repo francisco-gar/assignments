@@ -19,7 +19,7 @@ const App = () => {
           </Loading>
         )}
       </CharactersData>
-      <Footer />
+
     </div>
   )
 }
