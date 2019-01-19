@@ -1,9 +1,16 @@
 import React from 'react'
-import TvProductDetail from './TvProductDetail'
+
+import {Link} from 'react-router-dom'
 
 function TvProductList({ tvProducts }) {
     const tvComponents = tvProducts.map((tv, i) => (
-        <TvProductDetail key={i}{...tv} />
+        <li key={i}>
+            <Link to={{
+                pathname: `/Televisions/${i}`,
+                state: { tv }
+            }} >{tv.name}{<img src={tv.thumbnailImage} alt="sd"/>}</Link>
+        </li>
+
     ))
     return (
         <div>

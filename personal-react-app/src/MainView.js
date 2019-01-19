@@ -1,23 +1,23 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 
-import TvProductsData from './TvProductsData';
-import TvProductList from './TvProductList';
+import TvProductsData from './TvProductsData'
+import TvProductList from './TvProductList'
+import TvProductPage from './TvProductPage'
 
 import AppleProductList from './AppleProductList'
-import AppleProductsData from './AppleProductsData';
+import AppleProductsData from './AppleProductsData'
+import AppleProductPage from './AppleProductPage'
 
 import KeyboardProductList from './KeyboardProductList'
 import KeyboardProductsData from './KeyboardProductsData'
+import KeyboardProductPage from './KeyboardProductPage'
 
 import MouseProductList from './MouseProductList'
 import MouseProductsData from './MouseProductsData'
-
-import Home from './Home';
-import MouseProductItems from './MouseProductItems';
 import MouseProductPage from './MouseProductPage';
 
-
+import Home from './Home';
 
 function MainView({mouseProducts}) {
     
@@ -27,22 +27,27 @@ function MainView({mouseProducts}) {
                 {({ tvProducts }) => (
                     <div>
                         <Route exact path='/' component={Home} />
-                        <Route path='/Televisions' component={() => (
+                        <Route exact path='/Televisions' component={() => (
                             <TvProductList tvProducts={tvProducts} />
                         )} />
-
-                        {/* <Route exact path='/products/:sku' component={routeProps => (
-                            <TvProductDetail {...routeProps.location.state.products} />
-                        )} /> */}
+                        <Route exact path='/Televisions/:index' component=
+                            {routeProps => (
+                                <TvProductPage {...routeProps.location.state.tv} />
+                            )} />
+                        
                     </div>
                 )}
             </TvProductsData>
             <AppleProductsData>
                 {({ appleProducts }) => (
                     <div>
-                        <Route path='/Apple' component={() => (
+                        <Route exact path='/Apple' component={() => (
                             <AppleProductList appleProducts={appleProducts} />
                         )} />
+                        <Route exact path='/Apple/:index' component=
+                            {routeProps => (
+                                <AppleProductPage {...routeProps.location.state.apple} />
+                            )} />
                     </div>
                 )}
             </AppleProductsData>
@@ -52,6 +57,10 @@ function MainView({mouseProducts}) {
                         <Route path='/Keyboards' component={() => (
                             <KeyboardProductList keyboardProducts={keyboardProducts} />
                         )} />
+                        <Route exact path='/Keyboard/:index' component=
+                            {routeProps => (
+                                <KeyboardProductPage {...routeProps.location.state.keyboard} />
+                            )} />
 
                     </div>
                 )}
@@ -59,10 +68,10 @@ function MainView({mouseProducts}) {
             <MouseProductsData mouseProducts={mouseProducts}>
                 {({ mouseProducts }) => (
                     <div>
-                        <Route path='/Mice' component={() => (
+                        <Route exact path='/Mice' component={() => (
                             <MouseProductList mouseProducts={mouseProducts} />
                         )} />
-                        <Route path='/Mice/:index' component=
+                        <Route exact path='/Mice/:index' component=
                             {routeProps => (
                                 <MouseProductPage {...routeProps.location.state.mouse} />
                             )} />

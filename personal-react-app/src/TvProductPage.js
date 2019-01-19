@@ -1,6 +1,6 @@
 import React from 'react'
 
-function AppleProductPage({name, image, regularPrice, salePrice, sku, longDescription, shortDescription, thumbnailImage}) {
+function TvProductPage({name, image, regularPrice, salePrice, sku, longDescription, shortDescription, thumbnailImage}) {
     return (
         <div>
             <div>
@@ -23,4 +23,4 @@ function AppleProductPage({name, image, regularPrice, salePrice, sku, longDescri
     )
 }
 
-export default AppleProductPage
+export default TvProductPage

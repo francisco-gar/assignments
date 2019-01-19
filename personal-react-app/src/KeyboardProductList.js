@@ -1,10 +1,16 @@
 import React from 'react'
-import KeyboardProductDetail from './KeyboardProductDetail'
+
+import {Link} from 'react-router-dom'
 
 function KeyboardProductList({ keyboardProducts }) {
-    console.log(keyboardProducts)
-    const keyboardComponents = keyboardProducts.map((keyb, i) => (
-        <KeyboardProductDetail key={i}{...keyb} />
+    const keyboardComponents = keyboardProducts.map((keyboard, i) => (
+        <li key={i}>
+            <Link to={{
+                pathname: `/Keyboard/${i}`,
+                state: { keyboard }
+            }} >{keyboard.name}{<img src={keyboard.thumbnailImage} alt="sd"/>}</Link>
+        </li>
+
     ))
     return (
         <div>

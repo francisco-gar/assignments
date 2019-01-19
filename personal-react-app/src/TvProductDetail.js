@@ -1,12 +1,13 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
-function TvProductDetail({name, image, shortDescription, longDescription, regularPrice, salePrice, sku, thumbnailImage}) {
+function TvProductDetail({name, image, regularPrice, salePrice, thumbnailImage}) {
     return (
         <div>
             <div>
-                <h5>{name}</h5>
+            <Link to='/Television/:id'><h5>{name}</h5></Link>
             </div>
-            <div><img src={thumbnailImage} alt='not available' /></div>
+            <Link to='/Television/:id'><div><img src={image} alt={thumbnailImage}/></div></Link>
             <ul>
                 <li>{regularPrice}</li>
                 <li>{salePrice}</li>

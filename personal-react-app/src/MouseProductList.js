@@ -1,5 +1,4 @@
 import React from 'react'
-import MouseProductDetail from './MouseProductDetail'
 
 import {Link} from 'react-router-dom'
 
