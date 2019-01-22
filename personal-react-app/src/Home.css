@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+
+.imgproperties{
+    opacity: 0.2;
+}
+
+.homecenter{
+    display: flex;
+    justify-content: left;
+    padding-left: 20px;
+    font-size: 2em;
+    font-family: 'Oswald', sans-serif;
+    color: darkgray;
+    text-shadow: 1px 0 black;
+}
+

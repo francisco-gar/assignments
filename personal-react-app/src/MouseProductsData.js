@@ -13,7 +13,7 @@ export default class MouseProductsData extends Component {
     }
 
     getMouseProducts() {
-        axios.get('https://api.bestbuy.com/v1/products((search=mouse&search=gaming&search=wired))?apiKey=nsAkGCaJrNdxZwqGredJIoLI&sort=description.asc&show=description,image,longDescription,name,regularPrice,salePrice,shortDescription,thumbnailImage,largeImage,sku&pageSize=20&format=json')
+        axios.get('https://api.bestbuy.com/v1/products((search=mouse&search=gaming&search=wired))?apiKey=nsAkGCaJrNdxZwqGredJIoLI&sort=description.asc&show=description,image,longDescription,name,regularPrice,salePrice,shortDescription,thumbnailImage,largeImage,sku&pageSize=60&format=json')
             .then(response => this.setState({
                 mouseProducts: response.data.products,
                 loading: false,

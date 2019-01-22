@@ -1,23 +1,26 @@
 import React from 'react'
 
+import './TvProductPage.css'
+
 function TvProductPage({name, image, regularPrice, salePrice, sku, longDescription, shortDescription, thumbnailImage}) {
     return (
         <div>
             <div>
                 <h3>{name}</h3>
-            </div>
-            <div><img src={image} alt={thumbnailImage}/></div>
-            <ul>
-                <p>Retail Price: {regularPrice}</p>
-                <p>Sale Price: {salePrice}</p>
-                
-            </ul>
+            </div  >
+            <div className="tvflex"><img className='tvpageimage'src={image} alt={thumbnailImage}/></div>
             <div>
-            <p>{shortDescription}</p>
-                <p>Sku: {sku}</p>
+                <p><strong>Retail Price: </strong>{regularPrice}</p>
+                <p><strong>Sale Price: </strong>{salePrice}</p>
+                
+            </div>
+            <div>
+                <p>{shortDescription}</p>
+                
             </div>
             <div>
                 <p>{longDescription}</p>
+                <p><strong>Sku: </strong>{sku}</p>
             </div>
         </div>
     )

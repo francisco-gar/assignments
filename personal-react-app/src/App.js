@@ -3,9 +3,13 @@ import Header from './Header'
 import MainView from './MainView'
 import Nav from './Nav'
 
+import './App.css'
+
+
+
 function App() {
   return (
-    <div>
+    <div className='bodywrap'>
       <Header />
       <Nav />
       <MainView />

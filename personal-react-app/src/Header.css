@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+@import url('https://fonts.googleapis.com/css?family=Bungee');
+
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #eeeeee;
+}
+
+.headerdiv{
+    background-color: black;
+    height: 120px;
+    display: flex;
+    justify-content: left;
+    box-shadow: 0 4px grey;
+}
+
+.headertitle{
+    color: #eeeeee;
+    padding-left: 50px;
+}
+

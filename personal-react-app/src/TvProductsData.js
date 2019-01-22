@@ -12,7 +12,7 @@ export default class TvProductsData extends Component {
     }
 
     getTVProducts() {
-        axios.get('https://api.bestbuy.com/v1/products((search=samsung&search=television&search=4k))?apiKey=nsAkGCaJrNdxZwqGredJIoLI&sort=description.asc&show=description,image,thumbnailImage,longDescription,name,regularPrice,salePrice,shortDescription,sku&pageSize=20&format=json')
+        axios.get('https://api.bestbuy.com/v1/products((regularPrice>900)&(search=television&search=sony|search=samsung&search=4k))?apiKey=nsAkGCaJrNdxZwqGredJIoLI&sort=description.asc&show=description,image,thumbnailImage,longDescription,name,regularPrice,salePrice,shortDescription,sku&pageSize=99&format=json')
             .then(response => this.setState({
                 tvProducts: response.data.products,
                 loading: false,
@@ -20,6 +20,9 @@ export default class TvProductsData extends Component {
             }))
             
     }
+
+    
+
     componentDidMount() {
         this.getTVProducts();
     }

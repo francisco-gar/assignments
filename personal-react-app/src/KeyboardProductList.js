@@ -2,18 +2,23 @@ import React from 'react'
 
 import {Link} from 'react-router-dom'
 
+import './KeyboardProductList.css'
+
 function KeyboardProductList({ keyboardProducts }) {
     const keyboardComponents = keyboardProducts.map((keyboard, i) => (
-        <li key={i}>
+        
+        <div key={i}>
             <Link to={{
                 pathname: `/Keyboard/${i}`,
                 state: { keyboard }
-            }} >{keyboard.name}{<img src={keyboard.thumbnailImage} alt="sd"/>}</Link>
-        </li>
+            }} >{<img src={keyboard.image} alt="sd"/>}{keyboard.name}</Link>
+        
+        <p>{keyboard.regularPrice}</p>
+        </div>
 
     ))
     return (
-        <div>
+        <div className="keyboardlistgrid">
             {keyboardComponents}
         </div>
     )

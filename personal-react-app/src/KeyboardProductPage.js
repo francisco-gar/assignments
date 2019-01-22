@@ -1,17 +1,19 @@
 import React from 'react'
 
+import './KeyboardProductPage.css'
+
 function KeyboardProductPage({name, image, regularPrice, salePrice, sku, longDescription, shortDescription, thumbnailImage}) {
     return (
         <div>
             <div>
-                <h3>{name}</h3>
+                <h3 className='kbh3'>{name}</h3>
             </div>
-            <div><img src={image} alt={thumbnailImage}/></div>
-            <ul>
+            <div className='kbpageflex'><img className='kbpageimage'src={image} alt={thumbnailImage}/></div>
+            <div>
                 <p>Retail Price: {regularPrice}</p>
                 <p>Sale Price: {salePrice}</p>
                 
-            </ul>
+            </div>
             <div>
             <p>{shortDescription}</p>
                 <p>Sku: {sku}</p>

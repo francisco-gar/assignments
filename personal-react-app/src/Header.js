@@ -1,10 +1,14 @@
 import React from 'react'
 
+import './Header.css'
+
 function Header() {
     return (
-        <h1>
+        <div className='headerdiv'>
+        <h1 className='headertitle'>
             OK Buy
         </h1>
+        </div>
     )
 }
 

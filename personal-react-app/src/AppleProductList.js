@@ -2,18 +2,24 @@ import React from 'react'
 
 import {Link} from 'react-router-dom'
 
+import './AppleProductList.css'
+
 function AppleProductList({ appleProducts }) {
     const appleComponents = appleProducts.map((apple, i) => (
-        <li key={i}>
+
+        <div key={i}>
+        <div>
             <Link to={{
                 pathname: `/Apple/${i}`,
                 state: { apple }
-            }} >{apple.name}{<img src={apple.thumbnailImage} alt="sd"/>}</Link>
-        </li>
+            }} >{<img className="applelistimage" src={apple.image} alt="sd"/>}{apple.name}</Link>
+        </div>
+            <p>{apple.regularPrice}</p>
+        </div>
 
     ))
     return (
-        <div>
+        <div className='applelistgrid'>
             {appleComponents}
         </div>
     )

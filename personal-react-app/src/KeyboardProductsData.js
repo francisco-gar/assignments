@@ -13,7 +13,7 @@ export default class KeyboardProductsData extends Component {
     }
 
     getKeyboardProducts() {
-        axios.get('https://api.bestbuy.com/v1/products((search=keyboard&search=mechanical&search=black))?apiKey=nsAkGCaJrNdxZwqGredJIoLI&sort=description.asc&show=description,image,thumbnailImage,longDescription,name,regularPrice,salePrice,shortDescription,sku&pageSize=20&format=json')
+        axios.get('https://api.bestbuy.com/v1/products((search=keyboard&search=mechanical&search=black))?apiKey=nsAkGCaJrNdxZwqGredJIoLI&sort=description.asc&show=description,image,thumbnailImage,longDescription,name,regularPrice,salePrice,shortDescription,sku&pageSize=60&format=json')
             .then(response => this.setState({
                 keyboardProducts: response.data.products,
                 loading: false,

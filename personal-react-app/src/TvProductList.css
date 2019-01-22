@@ -1,0 +1,16 @@
+a{
+    /* color: black; */
+    text-decoration-line: none;
+    color: grey;
+}
+
+img{
+    width: 100%;
+}
+.tvlistgrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5em;
+
+
+}

@@ -1,0 +1,13 @@
+.apimageflex{
+    display: flex;
+    justify-content: center;
+
+}
+
+.appleproductimage{
+    width: 50%;
+    height: 50%;
+
+    justify-content: center;
+}
+

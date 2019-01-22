@@ -27,9 +27,11 @@ function MainView({mouseProducts}) {
                 {({ tvProducts }) => (
                     <div>
                         <Route exact path='/' component={Home} />
+
                         <Route exact path='/Televisions' component={() => (
                             <TvProductList tvProducts={tvProducts} />
                         )} />
+
                         <Route exact path='/Televisions/:index' component=
                             {routeProps => (
                                 <TvProductPage {...routeProps.location.state.tv} />

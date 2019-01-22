@@ -13,7 +13,7 @@ export default class AppleProductsData extends Component {
     }
 
     getAppleProducts() {
-        axios.get('https://api.bestbuy.com/v1/products((regularPrice>2000)&(search=apple&search=macbook&search=pro))?apiKey=nsAkGCaJrNdxZwqGredJIoLI&sort=description.asc&show=description,image,thumbnailImage,longDescription,name,regularPrice,salePrice,shortDescription,sku&pageSize=20&format=json')
+        axios.get('https://api.bestbuy.com/v1/products((regularPrice>2000)&(search=apple&search=macbook|search=mac&search=pro))?apiKey=nsAkGCaJrNdxZwqGredJIoLI&sort=description.asc&show=description,image,thumbnailImage,longDescription,name,regularPrice,salePrice,shortDescription,sku&pageSize=100&format=json')
             .then(response => this.setState({
                 appleProducts: response.data.products,
                 loading: false,

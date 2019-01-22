@@ -1,0 +1,8 @@
+.mouseproductimage{
+    width: 20%;
+    height: 20%;
+}
+.imageflex{
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,9 @@
+.tvflex{
+    display: flex;
+    justify-content: center;
+}
+
+.tvpageimage{
+    width: 50%;
+    height: 50%;
+}

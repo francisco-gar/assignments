@@ -1,0 +1,22 @@
+body{
+    max-width: 900px;
+}
+
+a{
+    /* color: black; */
+    text-decoration-line: none;
+    align-content: center;
+}
+
+.applelistimage{
+    width: 90%;
+    padding-bottom: 30px;
+}
+.applelistgrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5em;
+    align-items: center;
+
+
+}

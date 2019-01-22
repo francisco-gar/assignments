@@ -1,0 +1,14 @@
+.kbpageflex{
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: -100px; */
+    /* padding-top: -200px; */
+}
+.kbh3{
+
+}
+
+.kbpageimage{
+    width: 50%;
+    height: 50%;
+}
