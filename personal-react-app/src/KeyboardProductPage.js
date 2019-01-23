@@ -10,13 +10,13 @@ function KeyboardProductPage({name, image, regularPrice, salePrice, sku, longDes
             </div>
             <div className='kbpageflex'><img className='kbpageimage'src={image} alt={thumbnailImage}/></div>
             <div>
-                <p>Retail Price: {regularPrice}</p>
-                <p>Sale Price: {salePrice}</p>
+                <p><strong>Retail Price: </strong>{regularPrice}</p>
+                <p><strong>Sale Price: </strong>{salePrice}</p>
                 
             </div>
             <div>
             <p>{shortDescription}</p>
-                <p>Sku: {sku}</p>
+                <p><strong>Sku: </strong>{sku}</p>
             </div>
             <div>
                 <p>{longDescription}</p>

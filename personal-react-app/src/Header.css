@@ -4,18 +4,33 @@
 h1{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #eeeeee;
+    font-size: 3em;
 }
 
 .headerdiv{
     background-color: black;
     height: 120px;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     box-shadow: 0 4px grey;
+    align-content: center;
 }
 
 .headertitle{
     color: #eeeeee;
     padding-left: 50px;
+}
+
+.maine{
+    width: 5%;
+    height: 50%;
+    align-content: center;
+
+
+}
+.maineflex{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 

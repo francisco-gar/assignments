@@ -9,12 +9,12 @@ function MouseProductPage({ name, image, regularPrice, salePrice, sku, longDescr
             </div>
             <div className='imageflex'><img className='mouseproductimage' src={image} alt={thumbnailImage} /></div>
                 <ul>
-                    <p>Retail Price: {regularPrice}</p>
-                    <p>Sale Price: {salePrice}</p>
+                    <p><strong>Retail Price: </strong>{regularPrice}</p>
+                    <p><strong>Sale Price: </strong>{salePrice}</p>
                 </ul>
             <div>
                 <p>{shortDescription}</p>
-                <p>Sku: {sku}</p>
+                <p><strong>Sku: </strong>{sku}</p>
             </div>
             <div>
                 <p>{longDescription}</p>
