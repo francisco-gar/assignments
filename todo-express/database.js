@@ -23,7 +23,7 @@ Database.prototype.save = function (todo) {
 }
 
 Database.prototype.findByIdAndRemove = function (id) {
-    const foundTodo = this.todos.find((todo) => {
+    const foundTodo = this.todos.find(todo => {
         return todo._id === id;
     })
 
@@ -45,12 +45,12 @@ Database.prototype.findByIdAndUpdate = function (id, updates) {
 }
 
 Database.prototype.findById = function (id) {
-    const foundTodo = this.todos.find((todo) => {
+    const foundTodo = this.todos.find(todo => {
         return todo._id === id;
     })
     if (foundTodo === undefined) return;
-    const index = this.todos.indexOf(foundTodo);
-    return index
+    const foundTodoId = { ...foundTodo }
+    return foundTodoId
 }
 
 module.exports = new Database();

@@ -1,5 +1,7 @@
 const express = require('express');
+
 require('dotenv').config();
+
 const app = express();
 
 const database = require('./database.js');
@@ -8,13 +10,13 @@ app.use(express.json());
 
 app.get('/todos', (req, res) => {
     const foundTodos = database.find();
-    res.send(foundTodos);
+    res.status(200).send(foundTodos);
 })
 
 app.post('/todos', (req, res) => {
     const todoToSave = req.body;
     const savedTodo = database.save(todoToSave);
-    res.send(savedTodo)
+    res.status(201).send(savedTodo)
 })
 
 
@@ -31,10 +33,11 @@ app.put('/todos/:id', (req, res) => {
     res.status(200).send(updatedTodo)
 })
 
-app.get('todos/:id', (req, res) => {
+app.get('/todos/:id', (req, res) => {
     const id = req.params.id;
-    const findById = database.findByIdAndReturn(id);
-    res.status(200).send(findById)
+    const foundTodo = database.findById(id)
+    res.status(200).send(foundTodo)
+
 
 })
 
