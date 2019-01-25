@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 
 export default class FormContainer extends Component {
     constructor(props){
@@ -10,11 +10,12 @@ export default class FormContainer extends Component {
         this.handleSubmit = this.handleSubmit.bind(this)
     }
     handleChange(e){
-        const {name, value} =e.target;
+        const {name, value, type, checked} = e.target;
         this.setState(ps => ({
             inputs: {
                 ...ps.inputs,
-                [name]: value
+                [name]: value,
+                [name]: type === 'checkbox' ? checked : value
             }
         }))
     }
@@ -24,11 +25,14 @@ export default class FormContainer extends Component {
         this.props.submit(this.state.inputs)
     }
 
+    
+
 
 
     render() {
         const props = {
-            inputs: this.state.inputs,
+            ...this.state,
+            // inputs: this.state.inputs,
             handleChange: this.handleChange,
             handleSubmit: this.handleSubmit
         }
@@ -37,3 +41,4 @@ export default class FormContainer extends Component {
         )
     }
 }
+

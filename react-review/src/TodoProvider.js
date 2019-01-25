@@ -1,8 +1,7 @@
 import React, { Component, createContext } from 'react'
 
-// import mockData from './mockData/todos.json'
-
 import axios from 'axios'
+
 const todoUrl = 'https://api.vschool.io/francisco/todo';
 
 const {Consumer, Provider} = createContext()

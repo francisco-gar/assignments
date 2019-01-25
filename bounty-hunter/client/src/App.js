@@ -1,15 +1,21 @@
 import React from 'react'
 
-import DataProvder from './DataProvider'
+import { withBountyContext } from './DataProvider'
 import Header from './Header'
+import MainView from './MainView';
+import BountyForm from './BountyForm'
+import Loading from './Loading'
 
-function App() {
+function App({loading}) {
   return (
     <div>
       <Header />
-      <DataProvder />
+      <BountyForm />
+      <Loading loading={loading}>
+      <MainView />
+      </Loading>
     </div>
   )
 }
 
-export default App
+export default withBountyContext(App)
