@@ -22,7 +22,7 @@ export default class FormContainer extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.submit(this.state.inputs)
+        this.props.submit(this.state.inputs);
     }
 
     
@@ -32,7 +32,7 @@ export default class FormContainer extends Component {
     render() {
         const props = {
             ...this.state,
-            // inputs: this.state.inputs,
+            inputs: this.state.inputs,
             handleChange: this.handleChange,
             handleSubmit: this.handleSubmit
         }

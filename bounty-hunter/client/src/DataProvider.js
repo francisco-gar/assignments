@@ -2,9 +2,9 @@ import React, { Component, createContext } from 'react'
 
 import axios from 'axios';
 
-const bountyUrl = '/bounties'
+// const bountyUrl = '/bounties'
 
-const {Consumer, Provider} = createContext()
+const { Consumer, Provider } = createContext()
 
 export default class DataProvider extends Component {
     constructor() {
@@ -24,44 +24,48 @@ export default class DataProvider extends Component {
 
     getBounties(url) {
         return axios.get(url)
-        .then(response => this.setState({
-            bounties: response.data,
-            loading: false
-        }))
+            .then(response =>
+                this.setState({
+                    bounties: response.data,
+                    loading: false
+                }))
     }
 
     addBounty(bounty) {
-        return axios.post(bountyUrl, bounty)
-        .then(response => this.setState(ps => ({
-            bounties:[...ps.bounties, response.data]
-        })))
+        return axios.post('/bounties/', bounty)
+            .then(response => this.setState(ps => ({
+                bounties: [...ps.bounties, response.data]
+            })))
     }
 
-    editBounty( bountyUrl, bounty) {
-        return axios.get(bountyUrl, bounty)
-        .then(response => this.setState(ps => ({
-            // bounties: ps.bounties.map(bounty => bounty._id === id ? {...bounty, updatedBounty} : bounty)
-            bounties:[...ps.bounties, response.data]
-        })))
+    editBounty(id, updatedBounty) {
+        axios.put(`/bounties/${id}`, updatedBounty)
+            .then(response =>
+                this.setState(ps => ({
+                    bounties: ps.bounties.map(bounty => bounty._id === id ? response.data : bounty)
+                })
+            ))
+        //res.send(response) 
     }
 
-    delBounty(bountyUrl, bounty) {
-        return axios.delete(bountyUrl, bounty)
-        .then(response => this.setState(ps => ({
-            bounties:[...ps.bounties, response.data]
-        })))
+    delBounty(id, bounty) {
+        return axios.delete(id, bounty)
+            .then(response => this.setState(ps => ({
+                bounties: [...ps.bounties, response.data]
+            })))
 
     }
 
-    componentDidMount(){
-        this.getBounties(bountyUrl)
+    componentDidMount() {
+        this.getBounties('/bounties/')
     }
 
     render() {
         const value = {
             ...this.state,
             addBounty: this.addBounty,
-            editBounty: this.editBounty
+            editBounty: this.editBounty,
+            delBounty: this.delBounty
         }
         return (
             <Provider value={value}>
@@ -73,6 +77,6 @@ export default class DataProvider extends Component {
 
 export const withBountyContext = C => props => (
     <Consumer>
-        {value => <C {...value} {...props}/>}
+        {value => <C {...value} {...props} />}
     </Consumer>
 )
