@@ -50,9 +50,11 @@ export default class DataProvider extends Component {
 
     delBounty(id, bounty) {
         return axios.delete(id, bounty)
-            .then(response => this.setState(ps => ({
-                bounties: [...ps.bounties, response.data]
-            })))
+            .then(() => {
+                this.setState(ps => ({
+                    bounties: ps.bounties.filter((x) => x._id !== id)
+                }))
+            })
 
     }
 
