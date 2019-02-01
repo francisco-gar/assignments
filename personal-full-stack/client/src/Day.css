@@ -1,0 +1,232 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+.iconn {
+  font-family: 'Material Icons', serif;
+  font-style: normal;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga'; */
+}
+
+
+/* VARIABLES */
+
+:root {
+  --main-color: black;
+  --text-color: black;
+  --text-color-light: black;
+  --border-color: Black;
+  --bg-color: #c2ff1a;
+  --neutral-color: #fff;
+}
+
+
+/* GENERAL */
+
+* {
+  box-sizing: border-box;
+}
+
+.bodywrapperr {
+    font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--text-color);
+    background: var(--bg-color);
+    position: relative;
+    max-width: 50em;
+    margin: auto;
+}
+
+header {
+  display: block;
+  width: 100%;
+  padding: 1.75em 0;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--neutral-color);
+}
+
+header #logo {
+  font-size: 185%;
+  text-align: center;
+  color: var(--main-color);
+  line-height: 1;
+}
+
+header #logo .iconn {
+  padding-right: .25em;
+}
+
+main {
+  display: block;
+  margin: 0 auto;
+  margin-top: 8em;
+}
+
+
+/* GRID */
+
+.roww {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.roww-middle {
+  align-items: center;
+}
+
+.coll {
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+.coll-start {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.coll-center {
+  justify-content: center;
+  text-align: center;
+}
+
+.coll-end {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+
+/* Calendar */
+
+.calendarr {
+  display: block;
+  position: relative;
+  width: 100%;
+  background: var(--neutral-color);
+  border: 4px solid var(--border-color);
+}
+
+.calendarr .headerr {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 115%;
+  padding: 1.5em 0;
+  border-bottom: 5px solid var(--border-color);
+}
+
+.calendarr .headerr .iconn {
+  cursor: pointer;
+  transition: .5s ease-out;
+}
+
+.calendarr .headerr .iconn:hover {
+  transform: scale(2.9);
+  transition: .5s ease-out;
+  color: var(--main-color);
+}
+
+.calendarr .headerr .iconn:first-of-type {
+  margin-left: 1em;
+}
+
+.calendarr .headerr .iconn:last-of-type {
+  margin-right: 1em;
+}
+
+.calendarr .days {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--text-color-light);
+  font-size: 90%;
+  padding: .75em 0;
+  border-bottom: 3px solid var(--border-color);
+}
+
+.calendarr .bodyy .celll {
+  position: relative;
+  height: 5em;
+  border-right: 3px solid var(--border-color);
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--neutral-color);
+  transition: 0.5s ease-out;
+}
+
+.calendarr .bodyy .celll:hover {
+  background: var(--bg-color);
+  transition: 0.5s ease-out;
+}
+
+.calendarr .bodyy .selectedd {
+  border-left: 30px solid transparent;
+  border-right: 5px solid  black;
+  border-image: linear-gradient(5deg, #66bb16 0%,#c2ff1a 40%);
+  border-image-slice: 1;
+}
+
+.calendarr .bodyy .roww {
+  border-bottom: 4px solid var(--border-color);
+}
+
+.calendarr .bodyy .roww:last-child {
+  border-bottom: none;
+}
+
+.calendarr .bodyy .celll:last-child {
+  border-right: none;
+}
+
+.calendarr .bodyy .celll .numberr {
+  position: absolute;
+  font-size: 82.5%;
+  line-height: 1;
+  top: .75em;
+  right: .75em;
+  font-weight: 800;
+}
+
+.calendarr .bodyy .disabledd {
+  color: var(--text-color-light);
+  pointer-events: none;
+}
+
+.calendarr .bodyy .celll .bgg {
+  font-weight: 700;
+  line-height: 1;
+  color: var(--main-color);
+  opacity: 0;
+  font-size: 1.2em;
+  position: relative;
+  top: -.1em;
+  right: -.05em;
+  transition: .25s ease-out;
+  letter-spacing: -.02em;
+}
+
+.calendarr .bodyy .celll:hover .bgg, .calendarr .bodyy .selectedd .bgg  {
+  opacity: 0.25;
+  transition: .7s ease-in-out;
+}
+
+.calendarr .bodyy .coll {
+  flex-grow: 0;
+  flex-basis: calc(100%/1);
+  width: calc(100%/1);
+}

@@ -9,6 +9,7 @@ export default class FormContainer extends Component {
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
     }
+    
     handleChange(e){
         const {name, value, type, checked} = e.target;
         this.setState(ps => ({
@@ -24,10 +25,6 @@ export default class FormContainer extends Component {
         e.preventDefault();
         this.props.submit(this.state.inputs);
     }
-
-    
-
-
 
     render() {
         const props = {

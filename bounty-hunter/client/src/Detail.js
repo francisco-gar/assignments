@@ -17,7 +17,7 @@ function Detail({ key, editBounty, toggle, on, firstName, lastName, living, type
             <p>{type}</p>
             <button onClick={() => delBounty(_id)}>x</button>
             <button onClick={toggle}>Edit</button>
-            {on &&<EditForm  inputs={{firstName, bountyAmount, living, type, lastName}} submit={inputs => editBounty(_id, inputs)}></EditForm>}
+            {on && <EditForm  inputs={{firstName, bountyAmount, living, type, lastName}} submit={inputs => editBounty(_id, inputs)} ></EditForm>}
         </div>
     )
 }
