@@ -18,19 +18,7 @@ const lessonSchema = new mongoose.Schema({
         required: false
     },
     time: {
-        type: Number,
-        required: true
-    },
-    day: {
-        type: Number,
-        required: true
-    },
-    month: {
-        type: Number,
-        required: true
-    },
-    year: {
-        type: Number,
+        type: Date,
         required: true
     }
 })

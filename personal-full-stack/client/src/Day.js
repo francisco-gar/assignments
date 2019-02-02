@@ -3,6 +3,8 @@ import dateFns from 'date-fns';
 
 import React, { Component } from 'react'
 
+import {Link} from 'react-router-dom'
+
 import "./Day.css"
 
 
@@ -36,7 +38,7 @@ export default class Day extends Component {
         const { currentDay, selectedHour } = this.state;
         const dayStart = dateFns.startOfDay(currentDay);
         const dayEnd = dateFns.endOfDay(dayStart);
-        const startHour = dateFns.setHours(dayStart, 9)
+        const startHour = dateFns.setHours(dayStart, 7)
         const endHour = dateFns.setHours(currentDay, 17);
 
         const hourFormat = "H:00a";
@@ -54,18 +56,20 @@ export default class Day extends Component {
                 continue;
             }
             hours.push(
-                <div
+                <Link
+                    to={`/hour/${hour}`}
                     className={`coll celll ${
                         !dateFns.isSameDay(hour, dayStart)
                             ? "disabledd"
                             : dateFns.isSameHour(hour, selectedHour) ? "selectedd" : ""
                         }`}
                     key={hour}
-                    onClick={() => this.onHourClick(dateFns.parse(cloneHour))}
-                >
+                    onClick={() => this.onHourClick(dateFns.parse(cloneHour))}>
+                <div>
                     <span className="numberr">{formattedHour}</span>
                     <span className="bgg">{formattedHour}</span>
                 </div>
+                </Link>
             );
             hour = dateFns.addHours(hour, 1);
         }
