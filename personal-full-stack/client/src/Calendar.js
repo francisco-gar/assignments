@@ -1,5 +1,6 @@
 import React from "react";
 import dateFns from "date-fns";
+import { matchLessonDay } from './lib'
 
 import "./MonthView.css";
 import { Link } from 'react-router-dom';
@@ -66,6 +67,7 @@ class Calendar extends React.Component {
       for (let i = 0; i < 7; i++) {
         formattedDate = dateFns.format(day, dateFormat);
         // const cloneDay = day;
+        
         days.push(
           <Link
             to={`/day/${day}`}
@@ -83,6 +85,7 @@ class Calendar extends React.Component {
         );
         day = dateFns.addDays(day, 1);
       }
+      
       rows.push(
         <div className="row" key={day}>
           {days}

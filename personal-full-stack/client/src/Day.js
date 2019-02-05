@@ -1,14 +1,15 @@
-
 import dateFns from 'date-fns';
+import { matchLessonTime } from './lib'
 
 import React, { Component } from 'react'
 
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { withLessonContext } from './LessonProvider';
 
 import "./Day.css"
 
 
-export default class Day extends Component {
+class Day extends Component {
     state = {
         selectedHour: 1,
         currentDay: new Date(this.props.match.params.date)
@@ -51,13 +52,19 @@ export default class Day extends Component {
         while (hour <= endHour) {
             formattedHour = dateFns.format(hour, hourFormat);
             const cloneHour = hour;
-            if(new Date(hour).getHours() === 12) {
+            if (new Date(hour).getHours() === 12) {
                 hour = dateFns.addHours(hour, 1);
                 continue;
             }
+            // we know what the hour is
+            // we have access to the lessons
+            const scheduledLesson = this.props.lessons.find(matchLessonTime(hour))
             hours.push(
                 <Link
-                    to={`/hour/${hour}`}
+                    to={{
+                        pathname: `/hour/${hour}`,
+                        state: { scheduledLesson }
+                    }}
                     className={`coll celll ${
                         !dateFns.isSameDay(hour, dayStart)
                             ? "disabledd"
@@ -65,10 +72,11 @@ export default class Day extends Component {
                         }`}
                     key={hour}
                     onClick={() => this.onHourClick(dateFns.parse(cloneHour))}>
-                <div>
-                    <span className="numberr">{formattedHour}</span>
-                    <span className="bgg">{formattedHour}</span>
-                </div>
+                    <div>
+                        <p>{scheduledLesson && (scheduledLesson.fName + ' ' + scheduledLesson.lName)}</p>
+                        <span className="numberr">{formattedHour}</span>
+                        <span className="bgg">{formattedHour}</span>
+                    </div>
                 </Link>
             );
             hour = dateFns.addHours(hour, 1);
@@ -112,3 +120,5 @@ export default class Day extends Component {
         )
     }
 }
+
+export default withLessonContext(Day)

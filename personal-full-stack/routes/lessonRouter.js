@@ -25,8 +25,8 @@ lessonRouter.route('/')
 lessonRouter.route('/:id')
     .get((req, res, next) => {
         const id = req.params.id;
-        Lesson.findById(id)
-            .then(foundLesson => res.status(200).send(foundLesson))
+        Lesson.findOne({time: id})
+            .then(foundLesson => console.log(foundLesson))
             .catch(err => {
                 res.status(500);
                 next(err);

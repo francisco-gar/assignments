@@ -4,15 +4,19 @@ import MonthView from './MonthView'
 import Day from './Day'
 import { Route } from 'react-router-dom';
 import LessonForm from './LessonForm';
+import Header from './Header'
 
-function MainView() {
+import { withLessonContext } from './LessonProvider'
+
+function MainView({ lessons }) {
     return (
         <div>
+            {/* <Header /> */}
             <Route exact path="/" component={MonthView} />
-            <Route path="/day/:date" component={Day}/>
+            <Route path="/day/:date" component={Day} />
             <Route path="/hour/:date" component={LessonForm} />
         </div>
     )
 }
 
-export default MainView
+export default withLessonContext(MainView)

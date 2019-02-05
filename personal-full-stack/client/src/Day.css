@@ -13,10 +13,6 @@
   white-space: nowrap;
   direction: ltr;
 
-  /* -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'liga'; */
 }
 
 a{
@@ -24,19 +20,18 @@ a{
   text-shadow: .5px .5px .5px #66bb16;
 }
 
-/* VARIABLES */
+
 
 :root {
-  --main-color: black;
+  --main-color: #c2ff1a;
   --text-color: black;
   --text-color-light: black;
   --border-color: Black;
   --bg-color: #c2ff1a;
-  --neutral-color: #fff;
+  --neutral-color: #ffffff;
 }
 
 
-/* GENERAL */
 
 * {
   box-sizing: border-box;
@@ -50,7 +45,7 @@ a{
     color: var(--text-color);
     background: var(--bg-color);
     position: relative;
-    max-width: 40em;
+    max-width: 30em;
     margin: auto;
 }
 
@@ -176,9 +171,9 @@ main {
 }
 
 .calendarr .bodyy .celll:hover {
-  background: #a7f75d;
+  background: #c2ff1a;
   transition: 0.2s ease-out;
-  border: solid black 1.5px;
+  border: solid grey 1.5px;
 }
 
 .calendarr .bodyy .selectedd {
@@ -217,7 +212,7 @@ main {
 .calendarr .bodyy .celll .bgg {
   font-weight: 700;
   line-height: 1;
-  color: var(--main-color);
+  color: black;
   opacity: 0;
   font-size: 1.2em;
   position: relative;
@@ -228,7 +223,7 @@ main {
 }
 
 .calendarr .bodyy .celll:hover .bgg, .calendarr .bodyy .selectedd .bgg  {
-  opacity: 0.5;
+  opacity: 0.9;
   transition: .5s ease-in-out;
 }
 

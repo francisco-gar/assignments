@@ -23,12 +23,12 @@
 /* VARIABLES */
 
 :root {
-  --main-color: black;
+  --main-color: #c2ff1a;
   --text-color: black;
   --text-color-light: black;
-  --border-color: Black;
+  --border-color: #c2ff1a;
   --bg-color: #c2ff1a;
-  --neutral-color: #fff;
+  --neutral-color: black;
 }
 
 
@@ -210,7 +210,7 @@ main {
 .calendar .body .cell .bg {
   font-weight: 700;
   line-height: 1;
-  color: var(--main-color);
+  color: black;
   opacity: 0;
   font-size: 3em;
   position: absolute;
