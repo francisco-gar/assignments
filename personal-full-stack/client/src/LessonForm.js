@@ -2,15 +2,11 @@ import React from 'react'
 import FormContainer from './FormContainer';
 import { withLessonContext } from './LessonProvider';
 import LessonDetail from './LessonDetail';
-import moment from "moment";
 
 import './LessonForm.css'
 
 
-function LessonForm({ addLesson, match, location, history, lessons }) {
-
-    // console.log(match)
-    // const les = lessons.filter()
+function LessonForm({ addLesson, match, location, history }) {
     return (
         <div>
             {location.state.scheduledLesson ?

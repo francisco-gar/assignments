@@ -1,17 +1,22 @@
 import React from 'react'
+import { withLessonContext } from './LessonProvider';
 
-function LessonDetail({fName, lName, lessonPlan, email}) {
+import { withRouter } from 'react-router-dom'
+
+function LessonDetail({ fName, lName, lessonPlan, email, delLesson, _id, history }) {
     return (
         <div>
-        <div>
             <h2>{fName} {lName}</h2>
-
             <p><strong>Lesson Plan: </strong>{lessonPlan}</p>
             <p>{email}</p>
-        </div>
-        <button>X</button>
+            <button
+                onClick={() => {
+                    delLesson(_id)
+                    history.push('/')
+                }}
+            >x</button>
         </div>
     )
 }
 
-export default LessonDetail
+export default withRouter(withLessonContext(LessonDetail))

@@ -40,7 +40,7 @@ export default class LessonProvider extends Component {
     }
 
     delLesson(id, lesson) {
-        return axios.delete(id, lesson)
+        return axios.delete(`/api/lessons/${id}`)
             .then(() => {
                 this.setState(ps => ({
                     lessons: ps.lessons.filter((x) => x._id !== id)

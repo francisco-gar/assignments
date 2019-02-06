@@ -8,8 +8,8 @@ import LessonProvider from './LessonProvider';
 
 ReactDOM.render(
     <BrowserRouter>
-    <LessonProvider>
-        <App />
+        <LessonProvider>
+            <App />
         </LessonProvider>
     </BrowserRouter>,
     document.getElementById('root'));

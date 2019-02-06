@@ -7,3 +7,4 @@ export const matchLessonTime = hour => lesson => {
 export const matchLessonDay = day => lesson => {
     return dateFns.isEqual(day, lesson.time.day)
 }
+

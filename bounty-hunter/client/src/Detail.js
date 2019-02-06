@@ -6,7 +6,7 @@ import {withBountyContext} from './DataProvider'
 
 import {withToggler} from './Toggler'
 
-function Detail({ key, editBounty, toggle, on, firstName, lastName, living, type, bountyAmount, _id, delBounty, bounty }) {
+function Detail({ editBounty, toggle, on, firstName, lastName, living, type, bountyAmount, _id, delBounty }) {
     // const {firsTName, } = props.location.state.bounty;
     // console.log(_id)
     return (
